@@ -13,7 +13,7 @@ const App = () => {
     <div id='app'>
     <BrowserRouter>
       <Routes>
-        <Route path="/notes-app" element={<Notes notes = {notes}/>} />
+        <Route path="/Notes-App" element={<Notes notes = {notes}/>} />
         <Route path="/create-note" element={<CreateNote setnotes={setnotes}/>} />
         <Route path="/edit-note/:id" element={<EditNote notes={notes} setnotes={setnotes}/>} />
       </Routes>

@@ -21,7 +21,7 @@ const Notes = ({notes}) => {
       {!showSearch &&<h2>My Notes</h2>}
       {showSearch&&<input type="text" autoFocus value={text} onChange={(e)=> {setText(e.target.value) ;handleSearch()}} placeholder='KeyWord...'/> }
       <button className='btn' onClick={()=>setShowSearch(prev=>!prev)}>
-      {showSearch ?<AiOutlineClose onClick={()=> {window.location.reload()}} />
+      {showSearch ?<AiOutlineClose onClick={()=> {window.location.href='/Notes-App'}} />
       : <AiOutlineSearch/>} </button>
       </header>
       <div className='notes__container'>
