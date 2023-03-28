@@ -22,19 +22,19 @@ const EditNote = ({notes,setnotes}) => {
       })
       setnotes(newnotes)
     }
-    navigate("/")
+    navigate("/notes-app")
   }
   const handleDelete=()=>{
     if(window.confirm("Are You Sure To Delete")){
     const newnotes=notes.filter(item=>item.id != id)
     setnotes(newnotes)
-    navigate("/")
+    navigate("/notes-app")
     }
   }
   return (
     <section>
     <header className='create-note__header'>
-    <Link to="/" className="btn"> <IoIosArrowBack /> </Link>
+    <Link to="/notes-app" className="btn"> <IoIosArrowBack /> </Link>
     <button className="btn lg primary" onClick={handelform}>Save</button>
     <button className="btn danger" onClick={handleDelete}><AiTwotoneDelete/></button>
     </header>

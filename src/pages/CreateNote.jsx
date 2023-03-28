@@ -13,13 +13,13 @@ const CreateNote = ({setnotes}) => {
     if(title&&details){
       const note={id:uuid(),title,details,date}
       setnotes(prevNote=>[note,...prevNote])
-      navigate("/")
+      navigate("/notes-app")
     }
   }
   return (
     <section>
     <header className='create-note__header'>
-    <Link to="/" className="btn"> <IoIosArrowBack /> </Link>
+    <Link to="/notes-app" className="btn"> <IoIosArrowBack /> </Link>
     <button className="btn lg primary" onClick={handleSubmit}>Save</button>
     </header>
     <form className="create-note__form" onSubmit={handleSubmit}>
